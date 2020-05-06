@@ -1,0 +1,230 @@
+@import 'https://fonts.googleapis.com/css?family=Raleway:300,400';
+
+.logo{
+  font-family: 'Caveat';
+  
+}
+
+.p-tag{
+    color: black;
+  font-family: courier;
+  font-size: 160%;
+}
+}
+
+
+#createnote-tag{
+  
+}
+
+.form-control{
+  
+    width: 200px;
+    height: 100px;
+    border: 15px solid black;
+    animation: form-control 5s infinite;
+
+}
+
+@keyframes form-control {
+    50% {border-bottom-color: lightblue;}
+    50% {border-bottom-left-radius: 150px;}
+    50% {border-left: 15px solid lightblue;}
+    50% {box-shadow: 10px 20px 30px black;}
+  }
+#admin-main-control{
+    text-align: center;
+    /* padding-top: 10%; */
+}
+.h1-tag{
+  font-size: 600%;
+  font-family: 'Caveat';
+
+  color: red;
+  animation: h1-tag 5s infinite;
+}
+@keyframes h1-tag {
+  50% {color: whitesmoke;}
+}
+
+/* ============================================================== */
+body {
+    font-family: 'Raleway:300', sans-serif;
+    background-image: url("p.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+    
+.admin-sidenav {
+    width: auto;
+	height: auto;
+	margin-left: 0px; 
+}
+.admin-sidenav a {
+	text-decoration: none; 
+}
+.admin-sidenav li {
+	text-align: justify;
+	padding: .5rem;
+	padding-left: 1rem;
+	-webkit-transition: all .2s linear;
+	transition: all .2s linear;
+	background-color: #000;
+	border: 1px solid rgb(231, 23, 23); 
+}
+.admin-sidenav li a {
+	color: #fff; 
+}
+
+.admin-sidenav li a:active {
+	border-color: #02d3f5; 
+}
+
+.admin-sidenav li:hover {
+	border-radius: 0 .5rem .5rem 0;
+	border-color: #02d3f5;
+	-webkit-transform: translate(30px, 0px);
+	transform: translate(30px, 0px);
+	background: -webkit-linear-gradient(left, #006a7b, #002340);
+	background: linear-gradient(to right, #006a7b, #002340); 
+}
+
+.admin-sidenav li:active {
+	border-color: #02d3f5; 
+}
+/* =============================================================================== */
+
+#first-input{
+    font-family: 'Tangerine';
+    font-size: 600%;
+    padding-top: 6%;
+    background: 0;
+    border: 0;
+    outline: none;
+    width: 50vw;
+    max-width: 400px;
+    /* font-size: 1.5em; */
+    transition: padding 0.3s 0.2s ease;
+
+}
+#first-input:focus {
+    padding-bottom: 5px;
+  }
+  #first-input:after {
+    transform: scaleX(1);
+  }
+
+
+#second-input{
+    font-family: 'Tangerine';
+    font-size: 400%;
+    padding-top:10%;
+    background: 0;
+    border: 0;
+    outline: none;
+    width: 80vw;
+    max-width: 400px;
+    /* font-size: 1.5em; */
+    transition: padding 0.3s 0.2s ease;
+
+}
+.question{
+    position: relative;
+
+}
+.question:after {
+    content: " ";
+    position: absolute;
+    float: right;
+    width: 100%;
+    height: 3px;
+    
+    transform: scalex(0);
+    transition: transform 0.3s ease;
+    
+    background: #1abc9c;
+  }
+  /* ====================================== */
+  #delete-btn{
+    background-color: #f4511e;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 10px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+#delete-btn:hover {opacity: 1}
+/* ===================================================== */
+.btn{
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+
+  
+  background-color: coral;
+  animation: mybtn 5s infinite;
+}
+@keyframes mybtn {
+  50% {box-shadow: 10px 20px 30px black;}
+}
+  
+
+  
+
+.btn span{
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.btn:hover span {
+  padding-right: 25px;
+}
+
+.btn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* ========================================= */
+.butt {
+  float: right;
+  border: 1px outset blue;
+  background-color: lightBlue;
+  height:50px;
+  width:50px;
+  cursor:pointer;
+  border-radius: 50%;
+  opacity:20%;
+}
+
+.butt:hover {
+ background-color: rgb(230, 102, 70);
+  color:white;
+}

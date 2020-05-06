@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const rbutt = document.querySelector(".butt")
+  rbutt.addEventListener("click", refresh)
+
   const navBtn = document.querySelector(".navbar-brand")
 navBtn.addEventListener("click", () => renderForm())
 
@@ -12,15 +15,13 @@ function fetchAll(){
   fetch(url)
   .then(response => response.json())
   .then(data => data.forEach(noteArray => renderNote(noteArray)))
-  // .then(noteArray => renderNote(noteArray[0]))
-  // .then(()=> search())
-  
+
 }
 
 function renderNote(note){
   const ul = document.querySelector(".sidenav")
   const li = document.createElement("li")
-         li.id = note.id
+     li.id = note.id
   const secondA = document.createElement("a")
         
 
@@ -36,8 +37,8 @@ li.addEventListener("click", () => renderDescription(note))
 //=====================================================================================================
 function renderDescription(note){
   
-  const mainDiv = document.querySelector("#admin-main-control"),
-    
+         
+const mainDiv = document.querySelector("#admin-main-control"),
              h1 = document.createElement("h1"),
               p = document.createElement("p"),
             btn = document.createElement("button")
@@ -58,29 +59,6 @@ h1.innerText= note.title
 p.innerText = note.body
 
 mainDiv.append(h1, p, btn, editBtn)
-
-
-// const mainDiv = document.querySelector("#admin-main-control"),
-//              h1 = document.createElement("h1"),
-//               p = document.createElement("p"),
-//             btn = document.createElement("button")
-//             btn.id = "delete-btn"
-//             btn.addEventListener("click", () => deleteNote(note))
-//             btn.innerText="Delete"
-//             editBtn = document.createElement("button")
-//             editBtn.addEventListener("click", () => editNote(note))
-//             editBtn.id = "delete-btn"
-//             editBtn.innerText="Edit"
-
-
-// p.classList.add("p-tag")
-// h1.classList.add("h1-tag")
-
-// mainDiv.innerHTML = ""
-// h1.innerText= note.title
-// p.innerText = note.body
-
-// mainDiv.append(h1, p, btn, editBtn)
 
 }
 //======================================================================================================
@@ -225,7 +203,10 @@ function search(){
 
 }
 
+function refresh(){
+  location.reload()
 
+}
 
 // function myFunction() {
 //   var input, filter, ul, li, a, i, txtValue;
